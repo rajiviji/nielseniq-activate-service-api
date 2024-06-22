@@ -27,4 +27,11 @@ public class InternalController {
     	internalService.saveProductMetaData(productMetadata);
         return ResponseEntity.ok("Product metadata saved");
     }
+    
+    
+
+    @GetMapping("/health")
+    public String healthCheck() {
+        return "UP";
+    }
 }
